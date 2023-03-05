@@ -183,7 +183,7 @@ def stream(
                  )
                 content_range = resp.info()["Content-Length"]
                 file_size = int(content_range)
-             except (KeyError, IndexError, ValueError) as e:
+            except (KeyError, IndexError, ValueError) as e:
                 logger.error(e)
         while True:
             chunk = response.read()
